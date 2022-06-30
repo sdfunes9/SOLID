@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SOLID" />
+        <module name="ProyectoSOLID" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ProyectoSOLID" target="18" />
       <module name="SOLID" target="18" />
     </bytecodeTargetLevel>
   </component>
