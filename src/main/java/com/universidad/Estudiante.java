@@ -7,4 +7,6 @@ public interface Estudiante {
     public ArrayList<Double> listarNotas();
     public void listarMaterias();
     public void registrarEstudiante();
+    public void registrarCarreraEstudiante();
+    public void listarEstudiantes();
 }
