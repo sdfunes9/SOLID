@@ -5,7 +5,6 @@ public class Menu {
     public Menu(){
 
     }
-
     public void menu(){
 
         System.out.println("1.Registrar estudiante" +
