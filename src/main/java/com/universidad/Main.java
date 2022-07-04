@@ -11,7 +11,7 @@ public class Main {
         Carrera c1 = new Carrera();
         Materia m1 = new Materia();
         menu.menu();
-        int opcion = 0;
+        int opcion;
         opcion = x.nextInt();
 
         do {

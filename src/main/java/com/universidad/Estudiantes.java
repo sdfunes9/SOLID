@@ -28,6 +28,11 @@ public class Estudiantes extends Usuario implements Estudiante {
     @Setter @Getter
     ArrayList<String>historialMaterias = new ArrayList<>();
 
+    @Getter
+    private int numeroCuotas = 10;
+    @Getter @Setter
+    private int pagosRealizados = 0; // 10 cuotas anuales
+
     public Estudiantes(){
 
     }
@@ -42,16 +47,11 @@ public class Estudiantes extends Usuario implements Estudiante {
     }
     @Override
     public ArrayList<Double> listarNotas() {
-
-
     return notas;
-
     }
 
     @Override
     public void listarMaterias() {
-
-
 
     }
 
