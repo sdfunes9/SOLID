@@ -1,28 +1,23 @@
 package com.universidad;
 
 import java.util.Date;
-import java.util.Locale;
 import java.util.Scanner;
 
-public class adminAcademico extends Empleado{
+public class AdminAcademico extends Empleado{
 
-    public adminAcademico() {
+    public AdminAcademico() {
     }
 
-    public adminAcademico(int idUsuario, String nombre, String apellido, char sexo, Date fechaNacimiento, String statusUsuario, double salarioEmpleado) {
+    public AdminAcademico(int idUsuario, String nombre, String apellido, char sexo, Date fechaNacimiento, String statusUsuario, double salarioEmpleado) {
         super(idUsuario, nombre, apellido, sexo, fechaNacimiento, statusUsuario, salarioEmpleado);
     }
 
-    private String recibirEntrada(){
-        Scanner lector = new Scanner(System.in);
-        String entrada = lector.nextLine().toLowerCase();
-        return entrada;
-    }
     public void registrarMateria(){
         System.out.println("Ingresa el código de la materia que deseas registrar");
-        String entrada = recibirEntrada();
+        String[] materias
+        int entrada = recibirNumero();
         Materia materia = new Materia();
-        materia.setCodigoMateria(entrada);
+
         System.out.println("Se creó satisfactoriamente la materia"+ materia.mostrarinfo());
     }
     public void eliminarMateria(Materia materia){
@@ -35,5 +30,14 @@ public class adminAcademico extends Empleado{
             return;
         }
     }
-
+    private String recibirEntrada(){
+        Scanner lector = new Scanner(System.in);
+        String entrada = lector.nextLine().toLowerCase();
+        return entrada;
+    }
+    private int recibirNumero(){
+        Scanner lector = new Scanner(System.in);
+        int entrada =lector.nextInt();
+        return entrada;
+    }
 }

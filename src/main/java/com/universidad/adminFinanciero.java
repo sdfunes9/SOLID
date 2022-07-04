@@ -1,8 +1,6 @@
 package com.universidad;
 
-import java.util.List;
-
-public class adminFinanciero extends Empleado implements Sueldos
+public class AdminFinanciero extends Empleado implements Sueldos
     
         private int pagosPendientes(Estudiantes estudiante, int numeroCuotas){
             int pagos = estudiante.getPagosRealizados() + 1;
