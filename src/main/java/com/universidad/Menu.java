@@ -1,16 +1,29 @@
 package com.universidad;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Menu {
 
-    public Menu(){
+    private final PropiedadesConsola consola;
 
+    public Menu(PropiedadesConsola consola){
+        this.consola = consola;
     }
 
-    public void menu(){
-
-        System.out.println("1.Registrar estudiante" +
-                           "2.Listar estudiantes" +
-                           "3.Salir");
+    public void imprimirBienvenida() {
+        this.consola.limpiarConsola();
+        this.consola.imprimirLineaConNumerales();
+        this.consola.imprimirTextoCentrado("Bienvenido/a al Sistema de Administración Universitaria. (Version 1.0)");
+        this.consola.imprimirLineaConNumerales();
+        System.out.println();
+        System.out.println("Para continuar debe iniciar sesion!");
+        System.out.println("Desea iniciar sesion como ");
 
     }
 
